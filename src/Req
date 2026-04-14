@@ -1,0 +1,14 @@
+--Collections  -- to store more than one Objects
+sorting,insertion orders, duplicates, faster search , frequent manipulations
+
+List    -  interface  (it can store more than one object)
+   -- ArrayList  (May have duplicate elements,insertion order)  -- Random access
+   -- LinkedList  (frequent adding/removing)
+,Set  - interface (it can store more than one object, unique values)
+   -- HashSet (insertion order)
+   -- LinkedHashSet(maintain insertion order)
+,Map  -- interface  (it can store more than one object)
+   -- HashMap  (key,value)
+   -- LinkedHashMap
+
+

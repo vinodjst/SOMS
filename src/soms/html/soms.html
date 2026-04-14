@@ -1,0 +1,82 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>SOMS</title>
+
+    <link href="soms.css" rel="stylesheet" />
+    <!--external css-->
+</head>
+
+<body>
+<header>
+    <h1>Sales Order Management System</h1>
+</header>
+
+<!--
+<table> tag is for tabular content
+<thead>  -- table heading
+<tr> -- row
+<td> -- data
+-->
+
+<nav style="margin-top: 100px">
+    <ul>
+        <li><a href="soms.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+</nav>
+
+<section>
+    <form id="login-form">
+        <table>
+            <!--In line css-->
+
+            <tr>
+                <td></td>
+                <td><h2>Login</h2></td>
+            </tr>
+            <tr>
+                <td>User Name :</td>
+                <td>
+                    <input
+                            id="uname"
+                            placeholder="Enter username"
+                            required
+                            type="text"
+                    />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Password :</td>
+                <td>
+                    <input
+                            id="pass"
+                            placeholder="Enter password"
+                            required
+                            type="password"
+                    />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Don't have an account? <a href="register.html">Register</a></td>
+            </tr>
+        </table>
+    </form>
+</section>
+
+<div id="test">This is my text.....</div>
+<button onclick="changeText()">Click me to change the text</button>
+
+<footer>This is footer content</footer>
+
+<script src="soms.js"></script>
+</body>
+</html>
