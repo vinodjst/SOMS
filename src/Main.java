@@ -23,6 +23,7 @@ public class Main {
         int option = scanner.nextInt();
         UserService userService = new UserService();
         System.out.println(" Hi ");
+        Scanner scanner1 = new Scanner(System.in);
 
         switch (option) {
 
