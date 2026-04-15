@@ -70,3 +70,13 @@
     .filters button:active {
         transform: translateY(2px);
     }
+
+    .order-item {
+        list-style-type: none;
+        border: 1px solid gray;
+        border-radius: 6px;
+        background-color: lightgray;
+        padding: 24px;
+        margin-bottom: 12px;
+        max-width: 60%;
+    }
