@@ -8,30 +8,44 @@ const loginFormEl = document.getElementById("login-form")
 
 loginFormEl.addEventListener("submit", (e) => {
   e.preventDefault()
-  validateUser()
+
+  const isValidUser = validateUser()
+
+  // 👉 Only redirect if everything is valid
+  if (isValidUser) {
+    alert("Login Successful ✅")
+
+    // redirect to dashboard
+    window.location.href = "dashboard.html"
+  }
 })
 
 function validateUser() {
-  //validate user input value
   const usernameInputVal = usernameInputEl.value.trim()
+
+  // Username validation
   if (usernameInputVal === "") {
     alert("Username cannot be empty")
+    return false
   } else if (usernameInputVal.length > 6) {
     alert("Username should not be more than 6 chars")
+    return false
   } else {
     for (let i = 0; i < usernameInputVal.length; i++) {
       if (isSpecialChar(usernameInputVal, i)) {
         alert("Username should not contain special chars")
+        return false
       }
     }
   }
-  //validate password input value
+
+  // Password validation
   const passwordInputVal = passwordInputEl.value
-  validatePassword(passwordInputVal)
+  const isValidPass = validatePassword(passwordInputVal)
+
+  return isValidPass
 }
 
-
-//regex pattern
 function validatePassword(str) {
   let hasAlphabetChar = false
   let hasNumericChar = false
@@ -39,6 +53,7 @@ function validatePassword(str) {
 
   for (let i = 0; i < str.length; i++) {
     const code = str.charCodeAt(i)
+
     if ((code >= 65 && code <= 90) || (code >= 97 && code <= 122)) {
       hasAlphabetChar = true
     }
@@ -49,18 +64,18 @@ function validatePassword(str) {
       hasSpecialChar = true
     }
   }
-  console.log(`${hasAlphabetChar},  ${hasNumericChar}, ${hasSpecialChar}`)
+
   if (hasAlphabetChar && hasNumericChar && hasSpecialChar) {
-    return
+    return true
   } else {
-    alert(
-      "Password should contain atleast 1 numeric, 1 char and 1 special char",
-    )
+    alert("Password should contain atleast 1 numeric, 1 char and 1 special char")
+    return false
   }
 }
 
 function isSpecialChar(str, idx) {
   const code = str.charCodeAt(idx)
+
   if (
     (code >= 65 && code <= 90) ||
     (code >= 97 && code <= 122) ||
@@ -70,19 +85,3 @@ function isSpecialChar(str, idx) {
   }
   return true
 }
-
-// function validateUser(){
-
-//     console.log('inside validateUser() function');
-//      var userName = document.getElementById('uname').value;
-//      var pass = document.getElementById('pass').value;
-
-//   // username/password
-//   //you need validate
-//   //username - should not be blank /characters not more than 6/should not contain special char
-//   //password - should contain 1 numeric/ char/special char
-
-//      window.alert('Hello '+userName);
-//      window.alert('confirm password '+pass);
-
-// }

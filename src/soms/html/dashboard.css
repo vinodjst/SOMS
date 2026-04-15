@@ -1,0 +1,29 @@
+body {
+    background-color: #f8f9fa;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+.header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Cards */
+.card {
+    border-radius: 10px;
+}
+
+/* Order list */
+.list-group-item {
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
