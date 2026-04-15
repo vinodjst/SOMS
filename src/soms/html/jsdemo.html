@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>DEMO</title>
+    <link href="" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+<h2>SOMS</h2>
+
+<div id="container">
+    <h1>List of the products</h1>
+
+
+</div>
+
+<button onclick="addToCartArrow('iphone ')">Add to cart</button>
+
+<script>
+
+    let products =['iphone', 'samsung','moto','real me','one plus'];
+
+    console.log(products);
+
+    products.forEach(product =>{
+
+    document.getElementById('container').innerHTML +=' <br>'+product;
+
+
+    });
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
