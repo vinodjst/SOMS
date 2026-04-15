@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | SOMS</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<header>
+    <h1>Sales Order Management System</h1>
+</header>
+
+<nav>
+    <a href="soms.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="#">Dashboard</a>
+</nav>
+
+<main>
+    <h2>Welcome to your Dashboard</h2>
+    <div class="dashboard-grid">
+        <div class="card">
+            <h3>Total Orders</h3>
+            <p>12</p>
+        </div>
+        <div class="card">
+            <h3>Pending Shipments</h3>
+            <p>3</p>
+        </div>
+        <div class="card">
+            <h3>Revenue</h3>
+            <p>$45,000</p>
+        </div>
+    </div>
+
+
+</main>
+<div class="filters">
+    <button onclick="filterOrders('pending')">Show Pending</button>
+    <button onclick="filterOrders('shipped')">Show Shipped</button>
+    <button onclick="renderOrders(orders)">Show All</button>
+</div>
+
+<ul id="order-list">
+</ul>
+<script src="dashboard.js"></script>
+</body>
+</html>
