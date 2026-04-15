@@ -6,9 +6,17 @@ const usernameInputEl = document.getElementById("uname")
 const passwordInputEl = document.getElementById("pass")
 const loginFormEl = document.getElementById("login-form")
 
+
+
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    window.location.href = "dashboard.html";
+});
+
 loginFormEl.addEventListener("submit", (e) => {
   e.preventDefault()
-  validateUser()
+//  validateUser()
 })
 
 function validateUser() {

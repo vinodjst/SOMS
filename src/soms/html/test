@@ -1,16 +1,18 @@
+/**
+ * Filters orders by status and updates the display
+ * @param {string} status - 'pending' or 'shipped'
+ */
+const filterOrders = (status) => {
+    // Arrow function used here to filter the array
+    const filteredList = orders.filter(order => order.status === status);
 
+    // Display the result
+    renderOrders(filteredList);
+};
 
-
-task01 - login
-task02 - register
-task03 - products
-task04 - cart
-task05 - orders
-
-
-soumajit
-pavan
-pavani
-
-
-GIT - source code managing
+const renderOrders = (orderArray) => {
+    const listElement = document.getElementById('order-list');
+    listElement.innerHTML = orderArray
+        .map(o => `<li>Order #${o.id}: ${o.product} (${o.status})</li>`)
+        .join('');
+};
